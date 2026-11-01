@@ -238,23 +238,6 @@ nav a.link:hover::after,
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ---------- image placeholder (shows gradient if the photo is missing) ---------- */
-.ph {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, #f3c6e1, #cfa6e8);
-}
-
-.ph::after {
-    content: "✂";
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    font-size: 44px;
-    color: rgba(255, 255, 255, .7);
-}
-
 .ph img {
     position: absolute;
     inset: 0;
@@ -262,4 +245,161 @@ nav a.link:hover::after,
     height: 100%;
     object-fit: cover;
     z-index: 1;
+}
+
+/*hero */
+.hero {
+    position: relative;
+    min-height: 460px;
+    overflow: hidden;
+    background: linear-gradient(100deg, #de8fb5 0%, #e7aecf 45%, #efc4dc 100%);
+    color: #fff;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    min-height: 460px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 18px 0 30px;
+    max-width: 380px;
+}
+
+.hero-photo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 48%;
+    z-index: 1;
+}
+
+.hero-photo img {
+    object-position: center top;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 25%);
+    mask-image: linear-gradient(to right, transparent, #000 25%);
+}
+
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 6px;
+    background: #9b2fc2;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.hero-arrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 0 2.5px 2.5px;
+}
+
+.hero-arrow.prev::before {
+    transform: rotate(45deg);
+    margin-left: 3px;
+}
+
+.hero-arrow.next::before {
+    transform: rotate(-135deg);
+    margin-right: 3px;
+}
+
+.hero-arrow.prev {
+    left: 22px;
+}
+
+.hero-arrow.next {
+    right: 22px;
+}
+
+.slide-text {
+    transition: opacity .35s, transform .35s;
+}
+
+.slide-text.out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* ---------- newsletter strip ---------- */
+.strip {
+    background: var(--pink);
+    color: #fff;
+}
+
+.strip .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    flex-wrap: wrap;
+}
+
+.strip .txt {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    letter-spacing: .6px;
+    font-size: 15px;
+    max-width: 520px;
+}
+
+.strip .ico {
+    width: 65px;
+    height: 65px;
+}
+
+/* ---------- sections ---------- */
+section {
+    padding: 90px 0;
+}
+
+.title {
+    font-size: clamp(28px, 3.5vw, 36px);
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 3px;
+    background: var(--pink);
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 18px;
+    max-width: 560px;
+    margin: 18px 0 0;
 }

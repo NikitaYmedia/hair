@@ -23,27 +23,53 @@
             <span><img class="ico" src="images/geo.png" alt="" onerror="this.style.display='none'"> Your address
                 here</span><i></i><a href="tel:+4555278618"><img class="ico" src="images/icons/phone.png" alt=""
                     onerror="this.style.display='none'"> +45 552 786 18</a><i></i><a href="mailto:hello@hair.dk">
-                        <img class="ico" src="images/icons/mail.png" alt="" onerror="this.style.display='none'">
+                <img class="ico" src="images/icons/mail.png" alt="" onerror="this.style.display='none'">
                 hello@hair.dk</a>
         </div>
     </div>
     <!--HEADER: logo = images/logo.png | menu is sticky (position: sticky in css/style.css)-->
-  <header class="header">
-    <div class="container">
-      <a href="#top" class="logo"><img class="logo-img" src="images/logo.png" alt="HairStudio" height="44"></a>
-      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-      <nav class="nav">
-        <a class="link" href="#top">Home</a>
-        <a class="link" href="#about">About Us</a>
-        <a class="link" href="#services">Services</a>
-        <a class="link" href="#gallery">Gallery</a>
-        <a class="link" href="#reviews">Reviews</a>
-        <a class="link" href="#contacts">Contacts</a>
-        <button class="btn btn-purple" data-open="booking">Book Appointment</button>
-      </nav>
-    </div>
-  </header>
-  <main id="top">
+    <header class="header">
+        <div class="container">
+            <a href="#top" class="logo"><img class="logo-img" src="images/logo.png" alt="HairStudio" height="44"></a>
+            <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+            <nav class="nav">
+                <a class="link" href="#top">Home</a>
+                <a class="link" href="#about">About Us</a>
+                <a class="link" href="#services">Services</a>
+                <a class="link" href="#gallery">Gallery</a>
+                <a class="link" href="#reviews">Reviews</a>
+                <a class="link" href="#contacts">Contacts</a>
+                <button class="btn btn-purple" data-open="booking">Book Appointment</button>
+            </nav>
+        </div>
+    </header>
+    <main id="top">
+        <!--HERO: banner photo = images/hero.jpg | text and slides are in js/main.js (const slides)-->
+        <section class="hero" style="padding:0">
+            <div class="hero-photo ph"><img src="images/girl.png" alt="Beautiful wavy hair" onerror="this.remove()">
+            </div>
+            <button class="hero-arrow prev" aria-label="Previous"></button>
+            <button class="hero-arrow next" aria-label="Next"></button>
+            <div class="container">
+                <div>
+                    <div class="slide-text">
+                        <h1>LOOK AND FEEL<br>YOUR BEST</h1>
+                        <p>Professional hair care and styling in a comfortable atmosphere.</p>
+                    </div>
+                    <button class="btn btn-pink btn-lg" data-open="booking">Book an Appointment</button>
+                </div>
+            </div>
+        </section>
+        <!--NEWSLETTER STRIP: icon = images/icons/gift.png-->
+        <div class="strip">
+            <div class="container">
+                <div class="txt"><img class="ico" src="images/prese.png" alt=""
+                        onerror="this.style.display='none'"><span>Sign up for our newsletter and get a 10% discount on
+                        your first
+                        visit, as well as exclusive offers!</span></div>
+                <button class="btn btn-purple" data-open="newsletter">Subscribe to Newsletter</button>
+            </div>
+        </div>
 
 </body>
 
