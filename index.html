@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,43 @@
     <meta name="description" content="HairStudio – a modern hair salon: haircuts, styling, coloring and hair care.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script>try { if (sessionStorage.getItem('wipe')) document.documentElement.classList.add('is-wiping') } catch (e) { }</script>
 </head>
+
 <body>
-    
+    <div class="wipe pink"></div>
+    <div class="wipe purple"></div>
+    <!--TOP BAR: address / phone / email (change contacts here AND in the footer)-->
+    <div class="topbar">
+        <div class="container">
+            <span><img class="ico" src="images/geo.png" alt="" onerror="this.style.display='none'"> Your address
+                here</span><i></i><a href="tel:+4555278618"><img class="ico" src="images/icons/phone.png" alt=""
+                    onerror="this.style.display='none'"> +45 552 786 18</a><i></i><a href="mailto:hello@hair.dk">
+                        <img class="ico" src="images/icons/mail.png" alt="" onerror="this.style.display='none'">
+                hello@hair.dk</a>
+        </div>
+    </div>
+    <!--HEADER: logo = images/logo.png | menu is sticky (position: sticky in css/style.css)-->
+  <header class="header">
+    <div class="container">
+      <a href="#top" class="logo"><img class="logo-img" src="images/logo.png" alt="HairStudio" height="44"></a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a class="link" href="#top">Home</a>
+        <a class="link" href="#about">About Us</a>
+        <a class="link" href="#services">Services</a>
+        <a class="link" href="#gallery">Gallery</a>
+        <a class="link" href="#reviews">Reviews</a>
+        <a class="link" href="#contacts">Contacts</a>
+        <button class="btn btn-purple" data-open="booking">Book Appointment</button>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+
 </body>
+
 </html>
